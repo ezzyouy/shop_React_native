@@ -10,6 +10,9 @@ const SearchProducts = (props) => {
             {productsFiltered.length > 0 ?(
                 productsFiltered.map((item)=>(
                     <Box
+                        onPress={()=>{
+                            props.navigation.navigate('Product Detail', {item:item})
+                        }}
                         key={item._id}
                         avatar
                         style={{flex:1, flexDirection:'row', paddingTop:10}}
